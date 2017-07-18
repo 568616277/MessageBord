@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="struts2" extends="struts-default">
+        <action name="Login" class="struts2.action.LoginAction" method="execute">
+            <result name="success" type="redirectAction">
+                <param name="username">${user.username}</param>
+                <param name="actionName">Display</param>
+            </result>
+            <result name="input">/login.jsp</result>
+        </action>
+        <action name="Display" class="struts2.action.ShowCommentsAction" method="show">
+            <result name="show">/welcome.jsp</result>
+        </action>
+        <action name="AddComAction" class="struts2.action.AddCommentsAction" method="addCom">
+            <result name = "addSuccess" type="redirectAction">
+                <param name="actionName">Display</param>
+            </result>
+        </action>
+        <action name="delComAction" class="struts2.action.DelCommentsAction" method="delCom">
+            <result name = "delSuccess" type="redirectAction">
+                <param name="actionName">Display</param>
+            </result>
+        </action>
+    </package>
+</struts>
