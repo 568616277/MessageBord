@@ -1,5 +1,6 @@
 package struts2.action;
 
+import com.opensymphony.xwork2.ActionSupport;
 import struts2.dao.CommentsDAO;
 import struts2.dao.impl.CommentsDAOImpl;
 import struts2.vo.Comment;
@@ -7,7 +8,7 @@ import struts2.vo.Comment;
 /**
  * Created by zengman on 2017/7/17.
  */
-public class DelCommentsAction {
+public class DelCommentsAction extends ActionSupport{
    private int id;
 
     public int getId() {

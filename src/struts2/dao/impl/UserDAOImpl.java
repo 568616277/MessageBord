@@ -42,4 +42,25 @@ public class UserDAOImpl implements UserDAO {
         return flag;
     }
 
+    @Override
+    public int registerUser(User user) throws Exception {
+        int flag =0;
+        String sql = "insert into userinfo values(?,?)";
+        PreparedStatement pstmt = null ;
+        DBConnect dbc = null;
+        try {
+            dbc = new DBConnect() ;
+            pstmt = dbc.getConnection().prepareStatement(sql) ;
+            pstmt.setString(1,user.getUsername());
+            pstmt.setString(2,user.getPassword());
+            pstmt.executeUpdate();
+            pstmt.close() ;
+            flag=1;
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }finally {
+            dbc.close();
+        }
+        return flag;
+    }
 }

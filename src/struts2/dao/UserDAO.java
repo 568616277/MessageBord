@@ -10,4 +10,5 @@ import java.util.List;
 public interface UserDAO {
     public int queryByUsername(User user) throws Exception;
     //定义一个查询用户名的方法
+    public int registerUser(User user) throws Exception;
 }

@@ -102,7 +102,7 @@ This is my JSP page. <br>
       <button>create</button>
       <p class="message">Already registered? <a href="./login.jsp">Sign In</a></p>
     </form>
-    <%--<p>Register</p>--%>
+    <%--<p>RegisterAction</p>--%>
   </div>
 </div>
 

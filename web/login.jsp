@@ -85,7 +85,7 @@
             <button>login</button>
             <p class="message">Not registered? <a href="#">Create an account</a></p>
         </form>
-        <%--<p>Register</p>--%>
+        <%--<p>RegisterAction</p>--%>
     </div>
 </div>
 </body>
